@@ -1,6 +1,6 @@
 # Worldping
 
-**TODO: Add description**
+Elixir tools for accessing the WorldPing API (see https://worldping.raintank.io).
 
 ## Installation
 
@@ -18,3 +18,6 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
           [applications: [:worldping]]
         end
 
+  3. Configure the api_key environment variable in your config files:
+
+        config :worldping, api_key: "bearer <your_key>"
