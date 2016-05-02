@@ -14,8 +14,7 @@ defmodule Worldping.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [
-      :logger, :httpotion]]
+    [applications: [:logger, :httpotion, :poison]]
   end
 
   # Dependencies can be Hex packages:
@@ -28,6 +27,9 @@ defmodule Worldping.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpotion, "~> 2.2.0"}]
+    [
+      {:httpotion, "~> 2.2"},
+      {:poison, "~> 2.1"}
+    ]
   end
 end

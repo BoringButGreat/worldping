@@ -1,0 +1,338 @@
+[
+  {
+    "updated": "2016-04-28T14:46:37Z",
+    "state_check": "2016-04-28T14:46:36Z",
+    "state_change": "2016-04-28T14:46:37Z",
+    "state": -1,
+    "settings": [
+      {
+        "variable": "host",
+        "value": "www.boringbutgreat.com"
+      },
+      {
+        "variable": "port",
+        "value": "80"
+      },
+      {
+        "variable": "path",
+        "value": "/"
+      },
+      {
+        "variable": "timeout",
+        "value": "5"
+      },
+      {
+        "variable": "method",
+        "value": "GET"
+      },
+      {
+        "variable": "expectRegex",
+        "value": ""
+      },
+      {
+        "variable": "headers",
+        "value": "Accept-Encoding: gzip\nUser-Agent: raintank collector\n"
+      }
+    ],
+    "org_id": 14902,
+    "offset": 6,
+    "monitor_type_name": "HTTP",
+    "monitor_type_id": 1,
+    "id": 19722,
+    "health_settings": {
+      "steps": 3,
+      "num_collectors": 3,
+      "notifications": {
+        "enabled": false,
+        "addresses": "peter@boringbutgreat.com, david@boringbutgreat.com"
+      }
+    },
+    "frequency": 60,
+    "endpoint_slug": "boringbutgreat_com",
+    "endpoint_id": 4626,
+    "enabled": false,
+    "collectors": [
+      89,
+      101,
+      1,
+      6,
+      10,
+      84,
+      656,
+      4,
+      91,
+      104,
+      112,
+      2,
+      5,
+      9,
+      98,
+      87,
+      107,
+      3,
+      7,
+      8,
+      85
+    ],
+    "collector_tags": [],
+    "collector_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      84,
+      85,
+      87,
+      89,
+      91,
+      98,
+      101,
+      104,
+      107,
+      112,
+      656
+    ]
+  },
+  {
+    "updated": "2016-04-20T17:29:37Z",
+    "state_check": "2016-04-20T17:29:37Z",
+    "state_change": "2016-04-20T17:29:37Z",
+    "state": -1,
+    "settings": [
+      {
+        "variable": "host",
+        "value": ""
+      },
+      {
+        "variable": "path",
+        "value": "/"
+      },
+      {
+        "variable": "validateCert",
+        "value": "true"
+      },
+      {
+        "variable": "port",
+        "value": "443"
+      },
+      {
+        "variable": "method",
+        "value": "GET"
+      },
+      {
+        "variable": "headers",
+        "value": "Accept-Encoding: gzip\nUser-Agent: raintank collector\n"
+      },
+      {
+        "variable": "expectRegex",
+        "value": ""
+      },
+      {
+        "variable": "timeout",
+        "value": "5"
+      }
+    ],
+    "org_id": 14902,
+    "offset": 6,
+    "monitor_type_name": "HTTPS",
+    "monitor_type_id": 2,
+    "id": 19725,
+    "health_settings": {
+      "steps": 3,
+      "num_collectors": 3,
+      "notifications": {
+        "enabled": false,
+        "addresses": ""
+      }
+    },
+    "frequency": 10,
+    "endpoint_slug": "boringbutgreat_com",
+    "endpoint_id": 4626,
+    "enabled": false,
+    "collectors": [],
+    "collector_tags": [],
+    "collector_ids": []
+  },
+  {
+    "updated": "2016-04-28T14:46:28Z",
+    "state_check": "2016-04-28T14:45:36Z",
+    "state_change": "2016-04-28T14:46:16Z",
+    "state": -1,
+    "settings": [
+      {
+        "variable": "hostname",
+        "value": "boringbutgreat.com"
+      },
+      {
+        "variable": "timeout",
+        "value": "5"
+      }
+    ],
+    "org_id": 14902,
+    "offset": 6,
+    "monitor_type_name": "Ping",
+    "monitor_type_id": 3,
+    "id": 19728,
+    "health_settings": {
+      "steps": 3,
+      "num_collectors": 3,
+      "notifications": {
+        "enabled": false,
+        "addresses": "peter@boringbutgreat.com, david@boringbutgreat.com"
+      }
+    },
+    "frequency": 60,
+    "endpoint_slug": "boringbutgreat_com",
+    "endpoint_id": 4626,
+    "enabled": false,
+    "collectors": [
+      3,
+      9,
+      84,
+      107,
+      87,
+      91,
+      101,
+      1,
+      4,
+      5,
+      6,
+      98,
+      112,
+      2,
+      7,
+      8,
+      89,
+      10,
+      85,
+      104,
+      656
+    ],
+    "collector_tags": [],
+    "collector_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      84,
+      85,
+      87,
+      89,
+      91,
+      98,
+      101,
+      104,
+      107,
+      112,
+      656
+    ]
+  },
+  {
+    "updated": "2016-04-25T15:35:20Z",
+    "state_check": "2016-04-25T15:34:36Z",
+    "state_change": "2016-04-25T15:35:20Z",
+    "state": -1,
+    "settings": [
+      {
+        "variable": "name",
+        "value": "boringbutgreat.com"
+      },
+      {
+        "variable": "type",
+        "value": "A"
+      },
+      {
+        "variable": "server",
+        "value": "dns1.p02.nsone.net,dns2.p02.nsone.net,dns3.p02.nsone.net,dns4.p02.nsone.net"
+      },
+      {
+        "variable": "timeout",
+        "value": "5"
+      },
+      {
+        "variable": "port",
+        "value": "53"
+      },
+      {
+        "variable": "protocol",
+        "value": "udp"
+      }
+    ],
+    "org_id": 14902,
+    "offset": 6,
+    "monitor_type_name": "DNS",
+    "monitor_type_id": 4,
+    "id": 19731,
+    "health_settings": {
+      "steps": 3,
+      "num_collectors": 3,
+      "notifications": {
+        "enabled": true,
+        "addresses": "peter@boringbutgreat.com, david@boringbutgreat.com"
+      }
+    },
+    "frequency": 60,
+    "endpoint_slug": "boringbutgreat_com",
+    "endpoint_id": 4626,
+    "enabled": false,
+    "collectors": [
+      4,
+      7,
+      91,
+      101,
+      656,
+      2,
+      3,
+      5,
+      8,
+      1,
+      6,
+      85,
+      87,
+      104,
+      112,
+      9,
+      10,
+      84,
+      89,
+      98,
+      107
+    ],
+    "collector_tags": [],
+    "collector_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      84,
+      85,
+      87,
+      89,
+      91,
+      98,
+      101,
+      104,
+      107,
+      112,
+      656
+    ]
+  }
+]
