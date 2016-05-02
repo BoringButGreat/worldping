@@ -32,7 +32,7 @@ defmodule Worldping.API.Fake do
     with {:ok, monitors} <- api_get("/monitors") do
       {
         :ok,
-        Enum.filter(monitors, &(id == &1["endpoint_id"]))
+        Enum.filter(monitors, &(to_string(id) == to_string(&1["endpoint_id"])))
       }
     end
   end
