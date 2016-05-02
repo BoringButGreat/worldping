@@ -20,7 +20,11 @@ use Mix.Config
 #
 #     config :logger, level: :info
 #
-config :worldping, api_host: "https://worldping-api.raintank.io/api"
+if Mix.env == :test do
+  config :worldping, api_host: "test"
+else
+  config :worldping, api_host: "https://worldping-api.raintank.io/api"
+end
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment

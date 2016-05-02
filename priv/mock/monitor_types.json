@@ -1,0 +1,243 @@
+[
+  {
+    "settings": [
+      {
+        "variable": "name",
+        "required": true,
+        "description": "Record Name",
+        "default_value": "",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "type",
+        "required": true,
+        "description": "Record Type",
+        "default_value": "A",
+        "data_type": "Enum",
+        "conditions": {
+          "values": [
+            "A",
+            "AAAA",
+            "CNAME",
+            "MX",
+            "NS",
+            "PTR",
+            "SOA",
+            "SRV",
+            "TXT"
+          ]
+        }
+      },
+      {
+        "variable": "server",
+        "required": false,
+        "description": "Server",
+        "default_value": "8.8.8.8",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "port",
+        "required": false,
+        "description": "Port",
+        "default_value": "53",
+        "data_type": "Number",
+        "conditions": {}
+      },
+      {
+        "variable": "protocol",
+        "required": false,
+        "description": "Protocol",
+        "default_value": "udp",
+        "data_type": "Enum",
+        "conditions": {
+          "values": [
+            "tcp",
+            "udp"
+          ]
+        }
+      },
+      {
+        "variable": "timeout",
+        "required": true,
+        "description": "Timeout",
+        "default_value": "5",
+        "data_type": "Number",
+        "conditions": {}
+      }
+    ],
+    "name": "DNS",
+    "id": 4
+  },
+  {
+    "settings": [
+      {
+        "variable": "host",
+        "required": true,
+        "description": "Hostname",
+        "default_value": "",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "path",
+        "required": true,
+        "description": "Path",
+        "default_value": "/",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "port",
+        "required": false,
+        "description": "Port",
+        "default_value": "80",
+        "data_type": "Number",
+        "conditions": {}
+      },
+      {
+        "variable": "method",
+        "required": false,
+        "description": "Method",
+        "default_value": "GET",
+        "data_type": "Enum",
+        "conditions": {
+          "values": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE",
+            "HEAD"
+          ]
+        }
+      },
+      {
+        "variable": "headers",
+        "required": false,
+        "description": "Headers",
+        "default_value": "Accept-Encoding: gzip\nUser-Agent: raintank collector\n",
+        "data_type": "Text",
+        "conditions": {}
+      },
+      {
+        "variable": "expectRegex",
+        "required": false,
+        "description": "Content Match",
+        "default_value": "",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "timeout",
+        "required": true,
+        "description": "Timeout",
+        "default_value": "5",
+        "data_type": "Number",
+        "conditions": {}
+      }
+    ],
+    "name": "HTTP",
+    "id": 1
+  },
+  {
+    "settings": [
+      {
+        "variable": "host",
+        "required": true,
+        "description": "Hostname",
+        "default_value": "",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "path",
+        "required": true,
+        "description": "Path",
+        "default_value": "/",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "validateCert",
+        "required": false,
+        "description": "Validate SSL Certificate",
+        "default_value": "true",
+        "data_type": "Boolean",
+        "conditions": {}
+      },
+      {
+        "variable": "port",
+        "required": false,
+        "description": "Port",
+        "default_value": "443",
+        "data_type": "Number",
+        "conditions": {}
+      },
+      {
+        "variable": "method",
+        "required": false,
+        "description": "Method",
+        "default_value": "GET",
+        "data_type": "Enum",
+        "conditions": {
+          "values": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE",
+            "HEAD"
+          ]
+        }
+      },
+      {
+        "variable": "headers",
+        "required": false,
+        "description": "Headers",
+        "default_value": "Accept-Encoding: gzip\nUser-Agent: raintank collector\n",
+        "data_type": "Text",
+        "conditions": {}
+      },
+      {
+        "variable": "expectRegex",
+        "required": false,
+        "description": "Content Match",
+        "default_value": "",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "timeout",
+        "required": true,
+        "description": "Timeout",
+        "default_value": "5",
+        "data_type": "Number",
+        "conditions": {}
+      }
+    ],
+    "name": "HTTPS",
+    "id": 2
+  },
+  {
+    "settings": [
+      {
+        "variable": "hostname",
+        "required": true,
+        "description": "Hostname",
+        "default_value": "",
+        "data_type": "String",
+        "conditions": {}
+      },
+      {
+        "variable": "timeout",
+        "required": true,
+        "description": "Timeout",
+        "default_value": "5",
+        "data_type": "Number",
+        "conditions": {}
+      }
+    ],
+    "name": "Ping",
+    "id": 3
+  }
+]
