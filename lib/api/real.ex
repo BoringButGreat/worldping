@@ -15,7 +15,7 @@ defmodule Worldping.API.Real do
   end
 
   def api_post(path, body) do
-    HTTPotion.post(@api_host <> path, [body: body, headers: @headers])
+    HTTPotion.post(@api_host <> path, [body: Poison.encode(body), headers: @headers])
     |> validate
   end
 
