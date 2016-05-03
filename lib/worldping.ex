@@ -50,7 +50,7 @@ defmodule Worldping do
   Update a monitor; rely on user to properly format the json object that gets
   posted
   """
-  def update_monitor(json), do: api_post "/monitors", json
+  def update_monitor(json), do: api_post "/monitors", Poison.encode(json)
 
   @doc """
   get a list of all endpoints and their details
