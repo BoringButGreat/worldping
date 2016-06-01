@@ -73,4 +73,107 @@ defmodule Worldping do
       {:ok, []}
   """
   def endpoints(tag), do: api_get "/endpoints", %{tag: tag}
+
+  @doc """
+  Model for body:
+  {
+    "name": "www.raintank.io",
+    "tags": [
+      "raintank"
+    ],
+    "monitors": [
+      {
+        "monitor_type_id": 1,
+        "settings": [
+          {
+            "variable": "host",
+            "value": "www.raintank.io"
+          },
+          {
+            "variable": "port",
+            "value": "80"
+          },
+          {
+            "variable": "path",
+            "value": "/"
+          },
+          {
+            "variable": "timeout",
+            "value": "5"
+          },
+          {
+            "variable": "method",
+            "value": "GET"
+          },
+          {
+            "variable": "expectRegex",
+            "value": ""
+          }
+        ],
+        "endpoint_id": -1,
+        "collector_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "collector_tags": [],
+        "enabled": true,
+        "frequency": 60,
+        "health_settings": {
+          "steps": 3,
+          "num_collectors": 3,
+          "notifications": {
+            "enabled": false,
+            "addresses": ""
+          }
+        }
+      },
+      {
+        "monitor_type_id": 3,
+        "settings": [
+          {
+            "variable": "hostname",
+            "value": "www.raintank.io"
+          },
+          {
+            "variable": "timeout",
+            "value": "5"
+          }
+        ],
+        "endpoint_id": -1,
+        "collector_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "collector_tags": [],
+        "enabled": true,
+        "frequency": 10,
+        "health_settings": {
+          "steps": 3,
+          "num_collectors": 3,
+          "notifications": {
+            "enabled": false,
+            "addresses": ""
+          }
+        }
+      }
+    ]
+  }
+
+  "tags" is a list of strings
+  "monitors" is a list of JSONs specifying each monitor to be created
+  """
+  def create_endpoint(name, tags \\ [], monitors \\ [])
+  def create_endpoint(name, tags, monitors) do
+    Poison.encode(%{name: name, tags: tags, monitors: monitors})
+    |> create_endpoint_from_json
+  end
+
+  # Create an endpoint on remote server; rely on calling function to properly
+  # format the json object that gets posted
+  defp create_endpoint_from_json(json), do: api_put "/endpoints", json
+
 end
