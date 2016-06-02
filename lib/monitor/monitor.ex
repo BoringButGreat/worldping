@@ -86,7 +86,5 @@ defmodule Worldping.Monitor do
       frequency: frequency,
       health_settings: health_settings
     }
-    |> Poison.encode
-    |> verify_json
   end
 end
