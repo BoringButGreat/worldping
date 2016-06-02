@@ -38,4 +38,6 @@ defmodule Worldping.API.Fake do
   end
 
   def api_post("/monitors", json), do: {:ok, json}
+
+  def api_put("/endpoints", json), do: {:ok, json}
 end
