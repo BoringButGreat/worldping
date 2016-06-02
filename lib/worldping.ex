@@ -84,6 +84,7 @@ defmodule Worldping do
   def create_endpoint(name, tags \\ [], monitors \\ [])
   def create_endpoint(name, tags, monitors) do
     Poison.encode(%{name: name, tags: tags, monitors: monitors})
+    |> verify_json
     |> create_endpoint_from_json
   end
 
