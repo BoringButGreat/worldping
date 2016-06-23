@@ -21,12 +21,12 @@ defmodule Worldping.API.Real do
   end
 
   def api_post(path, body) do
-    HTTPotion.post(@api_host <> path, [body: body, header: @auth_header++@json_header])
+    HTTPotion.post(@api_host <> path, [body: body, headers: @auth_header++@json_header])
     |> validate
   end
 
   def api_put(path, body) do
-    HTTPotion.put(@api_host <> path, [body: body, header: @auth_header++@json_header])
+    HTTPotion.put(@api_host <> path, [body: body, headers: @auth_header++@json_header])
     |> validate
   end
 
