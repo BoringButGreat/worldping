@@ -77,9 +77,9 @@ defmodule Worldping.Monitor do
 
   defp monitor_spec(monitor_type_id, settings, endpoint_id, collector_ids, collector_tags, enabled, frequency, health_settings) do
     %{
-      MonitorTypeId: monitor_type_id,
+      monitor_type_id: monitor_type_id,
       settings: settings,
-      EndpointId: endpoint_id,
+      endpoint_id: endpoint_id,
       collector_ids: collector_ids,
       collector_tags: collector_tags,
       enabled: enabled,
