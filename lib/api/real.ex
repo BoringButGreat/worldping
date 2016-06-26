@@ -30,6 +30,11 @@ defmodule Worldping.API.Real do
     |> validate
   end
 
+  def api_delete(path) do
+    HTTPotion.delete(@api_host <> path, [headers: @auth_header])
+    |> validate
+  end
+
   def validate(response) do
     if HTTPotion.Response.success?(response) do
       Poison.decode(response.body)

@@ -88,6 +88,8 @@ defmodule Worldping do
     |> create_endpoint_from_json
   end
 
+  def delete_endpoint(endpoint), do: api_delete "/endpoints/#{endpoint}"
+
   # Create an endpoint on remote server; rely on calling function to properly
   # format the json object that gets posted
   defp create_endpoint_from_json(json), do: api_put "/endpoints", json
