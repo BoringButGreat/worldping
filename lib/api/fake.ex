@@ -2,6 +2,7 @@ defmodule Worldping.API.Fake do
   @api_host Application.get_env(:worldping, :api_host)
   @api_key Application.get_env(:worldping, :api_key)
   @headers ["Authorization": @api_key]
+  @default "Test not implemented"
 
   defp priv(path) do
     priv =
@@ -40,4 +41,6 @@ defmodule Worldping.API.Fake do
   def api_post("/monitors", json), do: {:ok, json}
 
   def api_put("/endpoints", json), do: {:ok, json}
+
+  def api_delete(_), do: @default
 end
