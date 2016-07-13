@@ -1,8 +1,8 @@
 defmodule Worldping.API.Real do
-  @api_host Application.get_env(:worldping, :api_host)
-  @api_key Application.get_env(:worldping, :api_key)
-  @auth_header ["Authorization": @api_key]
-  @json_header ["Content-Type": "application/json"]
+  defp api_host, do: Application.get_env(:worldping, :api_host)
+  defp api_key, do: Application.get_env(:worldping, :api_key)
+  defp auth_header, do: ["Authorization": api_key]
+  defp json_header, do: ["Content-Type": "application/json"]
 
   # Inside each individual API query, we can use a generic API call by sending the
   # appropriate arguments to the right path.
@@ -12,26 +12,26 @@ defmodule Worldping.API.Real do
   # don't, but "mix test" will fail - this will likely cause problems for
   # someone else who is using the Worldping API in their project.
   def api_get(path) do
-    HTTPotion.get(@api_host <> path, [headers: @auth_header])
+    HTTPotion.get(api_host <> path, [headers: auth_header])
     |> validate
   end
   def api_get(path, query_args) do
-    HTTPotion.get(@api_host <> path, [headers: @auth_header, query: query_args])
+    HTTPotion.get(api_host <> path, [headers: auth_header, query: query_args])
     |> validate
   end
 
   def api_post(path, body) do
-    HTTPotion.post(@api_host <> path, [body: body, headers: @auth_header++@json_header])
+    HTTPotion.post(api_host <> path, [body: body, headers: auth_header++json_header])
     |> validate
   end
 
   def api_put(path, body) do
-    HTTPotion.put(@api_host <> path, [body: body, headers: @auth_header++@json_header])
+    HTTPotion.put(api_host <> path, [body: body, headers: auth_header++json_header])
     |> validate
   end
 
   def api_delete(path) do
-    HTTPotion.delete(@api_host <> path, [headers: @auth_header])
+    HTTPotion.delete(api_host <> path, [headers: auth_header])
     |> validate
   end
 

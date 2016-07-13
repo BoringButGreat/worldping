@@ -1,6 +1,4 @@
 defmodule Worldping.Monitor do
-  import Worldping
-
   @doc """
   Create a JSON specification for an http monitor based on the given parameters
   """
