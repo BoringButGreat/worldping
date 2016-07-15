@@ -42,5 +42,5 @@ defmodule Worldping.API.Fake do
 
   def api_put("/endpoints", json), do: {:ok, json}
 
-  def api_delete(_), do: @default
+  def api_delete(url), do: {:ok, "TEST: delete #{url}"}
 end
