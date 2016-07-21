@@ -80,6 +80,10 @@ defmodule Worldping do
 
   The JSON objects for each monitor can be created with the functions in
   Worldping.Monitor (e.g. "Worldping.Monitor.ping" for a ping monitor).
+
+      iex> {:ok, endpoint} = Worldping.create_endpoint("test", ["tag1", "tag2"], ["mon1", "mon2"])
+      ...> Map.keys(endpoint)
+      ["monitors", "name", "tags"]
   """
   def create_endpoint(name, tags \\ [], monitors \\ [])
   def create_endpoint(name, tags, monitors) do
