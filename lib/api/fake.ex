@@ -38,9 +38,9 @@ defmodule Worldping.API.Fake do
     end
   end
 
-  def api_post("/monitors", json), do: Poison.decode json
+  def api_post("/monitors", json), do: load("/post/endpoints.json")
 
-  def api_put("/endpoints", json), do: Poison.decode json
+  def api_put("/endpoints", json), do: load("/post/endpoints.json")
 
   def api_delete(_), do: {:ok, "endpoint deleted"}
 end

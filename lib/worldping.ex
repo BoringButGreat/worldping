@@ -83,7 +83,7 @@ defmodule Worldping do
 
       iex> {:ok, endpoint} = Worldping.create_endpoint("test", ["tag1", "tag2"], ["mon1", "mon2"])
       ...> Map.keys(endpoint)
-      ["monitors", "name", "tags"]
+      ["id", "name", "orgId", "slug", "tags"]
   """
   def create_endpoint(name, tags \\ [], monitors \\ [])
   def create_endpoint(name, tags, monitors) do
