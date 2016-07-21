@@ -38,17 +38,9 @@ defmodule Worldping.API.Fake do
     end
   end
 
-  def api_post("/monitors", _) do
-    result = load("/post/endpoints.json")
-    IO.inspect(result)
-    result
-  end
+  def api_post("/monitors", _), do: load("/post/endpoints.json")
 
-  def api_put("/endpoints", _) do
-    result = load("/post/endpoints.json")
-    IO.inspect(result)
-    result
-  end
+  def api_put("/endpoints", _), do: load("/post/endpoints.json")
 
   def api_delete(_), do: {:ok, "endpoint deleted"}
 end
