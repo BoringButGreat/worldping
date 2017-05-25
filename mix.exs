@@ -4,10 +4,10 @@ defmodule Worldping.Mixfile do
   def project do
     [app: :worldping,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps()]
   end
 
   # Configuration for the OTP application
@@ -28,8 +28,8 @@ defmodule Worldping.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpotion, "~> 3.0.0", github: "myfreeweb/httpotion"},
-      {:poison, "~> 2.1"}
+      {:httpotion, "~> 3.0.2", github: "myfreeweb/httpotion"},
+      {:poison, "~> 3.1"}
     ]
   end
 end
