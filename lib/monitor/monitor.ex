@@ -3,7 +3,7 @@ defmodule Worldping.Monitor do
   Create a JSON specification for an http monitor based on the given parameters
   """
   def http(
-    host \\ "www.raintank.io",
+    host \\ "www.google.com",
     port \\ "80",
     path \\ "/",
     timeout \\ "5",
@@ -36,7 +36,7 @@ defmodule Worldping.Monitor do
   Create a JSON specification for an https monitor based on the given parameters
   """
   def https(
-    host \\ "www.raintank.io",
+    host \\ "www.google.com",
     port \\ "443",
     path \\ "/",
     timeout \\ "5",
@@ -71,7 +71,7 @@ defmodule Worldping.Monitor do
   Create a JSON specification for a ping monitor based on the given parameters
   """
   def ping(
-    hostname \\ "www.raintank.io",
+    hostname \\ "www.google.com",
     timeout \\ "5",
     endpoint_id \\ -1,
     collector_ids \\ [1, 2, 3, 4],
@@ -100,6 +100,8 @@ defmodule Worldping.Monitor do
     type \\ "A",
     protocol \\ "udp",
     timeout \\ "5",
+    port \\ 53,
+    server \\ "ns4.google.com,ns1.google.com,ns2.google.com,ns3.google.com"
     endpoint_id \\ -1,
     collector_ids \\ [1, 2, 3, 4],
     collector_tags \\ [],
@@ -110,12 +112,14 @@ defmodule Worldping.Monitor do
     health_notification_enabled \\ true,
     health_notification_email \\ ""
   )
-  def dns(name, type, protocol, timeout, endpoint_id, collector_ids, collector_tags, enabled, frequency, health_steps, health_collectors, health_notification_enabled, health_notification_email) do
+  def dns(name, type, protocol, timeout, port, server, endpoint_id, collector_ids, collector_tags, enabled, frequency, health_steps, health_collectors, health_notification_enabled, health_notification_email) do
     settings = [
       %{variable: "name", value: name},
       %{variable: "type", value: type},
       %{variable: "protocol", value: protocol},
-      %{variable: "timeout", value: timeout}
+      %{variable: "timeout", value: timeout},
+      %{variable: "port", value: port},
+      %{variable: "server", value: server}
     ]
     health_settings = health_settings_spec(health_steps, health_collectors, health_notification_enabled, health_notification_email)
     monitor_spec(4, settings, endpoint_id, collector_ids, collector_tags, enabled, frequency, health_settings)
