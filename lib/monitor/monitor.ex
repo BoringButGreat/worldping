@@ -101,7 +101,7 @@ defmodule Worldping.Monitor do
     protocol \\ "udp",
     timeout \\ "5",
     port \\ 53,
-    server \\ "ns4.google.com,ns1.google.com,ns2.google.com,ns3.google.com"
+    server \\ "ns4.google.com,ns1.google.com,ns2.google.com,ns3.google.com",
     endpoint_id \\ -1,
     collector_ids \\ [1, 2, 3, 4],
     collector_tags \\ [],
